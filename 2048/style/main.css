@@ -394,6 +394,17 @@ hr {
       .tile.tile-super .tile-inner {
         font-size: 10px; } }
 
+  .tile.tile-extreme .tile-inner {
+    color: #f9f7f2;
+    background: #C648F7;
+    font-size: 30px;
+  }
+  @media screen and (max-width: 520px) {
+    .tile.tile-extreme .tile-inner {
+      font-size: 10px;
+    }
+  }
+
 @-webkit-keyframes appear {
   0% {
     opacity: 0;
