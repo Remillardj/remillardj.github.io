@@ -1,0 +1,66 @@
+/*
+ * Copyright 2016-2017 Year of Programming
+ * Licensed under MIT
+ */
+
+@media (max-width: 360px) {
+	.navbar-brand {
+		font-size: 14px;
+	}
+	p,
+	li {
+		font-size: 16px !important;
+	}
+	h1,
+	h2 {
+		font-size: 28px !important;
+	}
+}
+
+@media (min-width: 818px) {
+	li {
+		line-height: 1.3em;
+	}
+}
+
+body {
+	background-color: #222;
+}
+
+p,
+li {
+	font-size: 22px;
+	font-family: 'Abel', arial;
+	font-weight: lighter;
+	padding-bottom: 5px;
+}
+
+code {
+	font-size: 1.5rem;
+}
+
+h1 {
+	font-weight: bold;
+}
+
+h1,
+h2 {
+	text-align: center;
+	color: #2E7D32;
+	font-family: 'Source Code Pro', monospace;
+}
+
+h3 {
+	color: #1976D2;
+}
+
+.page-header {
+	border: none;
+}
+
+#body-container {
+	width: 90%;
+	margin-top: -20px;
+	padding-bottom: 30px;
+	background-color: #FFF;
+}
