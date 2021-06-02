@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Top MySQL Queries for New Database Administrators | jremillard.com</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Top MySQL Queries for New Database Administrators" />
+<meta name="author" content="Remillardj" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Before entering the field of database administration, I wanted to look up what common queries they used to help solve any issues. Upon searching, I found some basic commands that the database administrator’s (DBA) used, although, my personal experience has been slightly different. I found that DBA’s don’t really use a handful of queries to solve issues, but rather various scripts and software to help debug problems. However, to start off with some groundwork, I found that these 3 MySQL queries helped me start to understand what and why these various scripts and software did what they did. Also, note that I typically learn best when pushed into the firehose." />
+<meta property="og:description" content="Before entering the field of database administration, I wanted to look up what common queries they used to help solve any issues. Upon searching, I found some basic commands that the database administrator’s (DBA) used, although, my personal experience has been slightly different. I found that DBA’s don’t really use a handful of queries to solve issues, but rather various scripts and software to help debug problems. However, to start off with some groundwork, I found that these 3 MySQL queries helped me start to understand what and why these various scripts and software did what they did. Also, note that I typically learn best when pushed into the firehose." />
+<link rel="canonical" href="http://localhost:4000/2018/09/30/top-mysql-queries-for-new-database-administrators.html" />
+<meta property="og:url" content="http://localhost:4000/2018/09/30/top-mysql-queries-for-new-database-administrators.html" />
+<meta property="og:site_name" content="jremillard.com" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-09-30T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Top MySQL Queries for New Database Administrators" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/2018/09/30/top-mysql-queries-for-new-database-administrators.html","headline":"Top MySQL Queries for New Database Administrators","datePublished":"2018-09-30T00:00:00-05:00","dateModified":"2018-09-30T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/09/30/top-mysql-queries-for-new-database-administrators.html"},"author":{"@type":"Person","name":"Remillardj"},"description":"Before entering the field of database administration, I wanted to look up what common queries they used to help solve any issues. Upon searching, I found some basic commands that the database administrator’s (DBA) used, although, my personal experience has been slightly different. I found that DBA’s don’t really use a handful of queries to solve issues, but rather various scripts and software to help debug problems. However, to start off with some groundwork, I found that these 3 MySQL queries helped me start to understand what and why these various scripts and software did what they did. Also, note that I typically learn best when pushed into the firehose.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="jremillard.com" />
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">jremillard.com</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Top MySQL Queries for New Database Administrators</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2018-09-30T00:00:00-05:00" itemprop="datePublished">
+        Sep 30, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Before entering the field of database administration, I wanted to look up what common queries they used to help solve any issues. Upon searching, I found some basic commands that the database administrator’s (DBA) used, although, my personal experience has been slightly different. I found that DBA’s don’t really use a handful of queries to solve issues, but rather various scripts and software to help debug problems. However, to start off with some groundwork, I found that these 3 MySQL queries helped me start to understand what and why these various scripts and software did what they did. Also, note that I typically learn best when pushed into the firehose.</p>
+
+<h3 id="1-explain-how-to-optimizing-queries">1. Explain How To Optimizing Queries</h3>
+
+<p>The EXPLAIN query is often used with Data Manipulation Language (DML) queries to help you optimize queries, to simply put, make them run faster and better. Although this query can be a bit to understand at first, it was one of the few queries that were never mentioned in most commonly top result articles on MySQL queries. I wanted newer DBA’s to find this, and look into it, to help them better their databases. To help understand this query, you can look into the <a href="https://dev.mysql.com/doc/refman/8.0/en/using-explain.html">MySQL documentation</a>, and supplement it with various chapters from <a href="https://www.amazon.com/Joe-Celkos-SQL-Smarties-Fourth/dp/0123820227">Joe Celko’s book</a>.</p>
+
+<h3 id="2-getting-the-number-of-rows-in-atable">2. Getting The Number of Rows in a Table</h3>
+
+<p>I never thought how often this query would be run, but surprisingly it is a lot more than expected. I have seen software developers and other DBA’s do this command similarly, and although which one is correct is trivial as they are essentially the same, one way could help you transition better into a different but same SQL database. The query to count the number of rows in a table follows the syntax of SELECT COUNT(1) FROM table whereas the query I am talking about is SELECT COUNT(*) FROM table</p>
+
+<p>Now, in this <a href="https://stackoverflow.com/questions/1221559/count-vs-count1-sql-server">StackOverflow post</a>, there is no difference between COUNT(1) and COUNT(<em>) , however, in an <a href="https://www.quora.com/What-are-the-most-useful-MySQL-queries">AskTOM post</a> from Oracle, they are stating there is a difference for Oracle DB’s, stating that COUNT(1) is a non-optimized version of COUNT(</em>) . So far, that seems like it’s pretty much it. To do one or the other seems unimportant, but what is important is how to get the number of rows. This query could be used to compare between a replica and snapshotted replica, to ensure that data has been transferred. Please note that this is NOT a surefire way to check, but can be a little extra for natural nature of paranoia as DBA’s.</p>
+
+<h3 id="3-show-me-what-the-table-looks-like-incode">3. Show Me What the Table Looks Like in Code</h3>
+
+<p>Compared to the previous two other queries, this might be the simplest but often overlooked when new DBA’s start. This query has helped me immensely with familiarizing myself with unknown tables, and to get a better idea of what is happening and how to improve it. DESCRIBE table or DESC table shows the layout of the table structure in code, you can see what is the foreign key, primary key, what data types are used, and so on. You do have to select a database beforehand, but this can help you with understanding your environment furthermore.</p>
+
+<h3 id="there-is-much-more-to-learn-there-always-willbe">There is Much More to Learn, There Always Will Be</h3>
+
+<p>To many, these queries may be simple and second nature, but to me and hopefully many other new DBA’s, this content is helpful. This is not even hitting the tip of the iceberg as a DBA, there is so much to learn and there always will be, but hopefully, this gets you started.</p>
+
+
+  </div><a class="u-url" href="/2018/09/30/top-mysql-queries-for-new-database-administrators.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+        <ul class="contact-list">
+          <li class="p-name">Remillardj</li>
+          <li><a class="u-email" href="mailto:hi@jremillard.com">hi@jremillard.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p>A small website to write about things I&#39;m learning, post my thoughts to forget later, things to teach that may be useful, and possible to post projects.
+</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/remillardj" title="remillardj"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/karatedba" title="karatedba"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

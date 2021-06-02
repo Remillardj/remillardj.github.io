@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "Growing Soft and Technical Skills Asynchronously."
+date:   2020-07-11
+---
+
+# Too much to update but here are my thoughts
+It's been a while, but as usual, it's because I've been busy. I've heavily focused my attention on building soft skills, leading me to narrow down further what career path do I want to get in. For so long, I have focused trying to get in, but now I am in, what do I do?
+
+## Management
+Being a manager has been something I like, to foster someone's growth, go bat for them, be real, and see where they go next. I never thought of myself relating to teachers, never thought I enjoyed helping others grow until I was teaching karate. To see someone's growth, hitting their achievements, navigating them, and helping them not bump into the barriers too much was a rewarding feeling that is different. Being a manager, a good one requires a lot of soft skills. Understanding others, empathy, genuine, and open. While being honest when it's hard, protecting them from unnecessary bureaucracy and praising when they do good or need it. Ultimately, being humble. Having a pyramid-based leadership where the tip of the pyramid is underneath, supporting the very bottom. That's what I want to do, the question is, can I do it? Reading articles from a technical manager's perspective is one that I easily relate and understand with minimal effort. Leading me to believe this is a field where I can flourish naturally because of my natural inclination.
+
+## IC
+There is something bliss about staying as an IC. It's simple, the context of it; you do it. You don't need to worry about repetition too much, convincing others, getting ammunition, and escalating without affecting your reputation. Especially helping the team meet deadlines. Not because I, myself, believe engineers need to meet strict deadlines, sometimes the scope of the goals is much more comprehensive than anticipated. All in all, your job is to do. The founder of the company I work for is happy at the senior level IC, has no interest in going further. I can't blame him. Normal life is a blissful one. As arbitrary as it is.
+
+## Security
+This section can be classified as an IC, but it is its own section due to recent pursuits. I have been learning what it entails in a company and mere speculation and depiction of others' views. There are many facets here with no clear path, often stumbling in, with or without intention. The opportunity seems to present itself without prompting so. Like many database engineers, so perhaps it will display in a time where it is least expected. I still really want to pursue, but I need to learn more about what it is and what do I want to specialize in. I will continue to learn, broaden my scope of knowledge, and try to specialize in one facet.
+
+## Conclusion
+All in all, I've been flip flopping between growing technical skills and soft skills. You may be wondering, "where is this asynchronous that the title mentions". Well, it's here. Learning about a field requires actually learning the technical aspects, to specialize in something, particular the field I am, requires technical skills. Understanding the different interactions vastly grows your understanding, strengthens my "jack of all trades" mindset I have but currently, slowly but surely, becoming a master of a couple of things. That just takes time and can be a fall-back marketing pitch to companies who could use my technical expertise. While doing this in my free time, I have also picked up many books to broaden my understanding. The two that come up are recommended by my mentor; "Peak Performance in Tennis: The Ultimate Guide to Mental Fitness" and "Atomic Habits". Those two have been great, understanding soft skills with teaching and what it means as well as in depth conversations about habits; what it is, how to build/dismantle, and why we have habits. Reading books hasn't been really a thing of mine, particularly non-technical as it wasn't my goal at the start. But as I strive for senior status, there is more than being technical, it's about guiding, understand peak performance and using habits to solve new problems.

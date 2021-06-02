@@ -1,0 +1,19 @@
+{
+  "name": "remillardtech",
+  "version": "1.0.0",
+  "description": "web design, software solution and computer security consulting company based out of seattle",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-htmlmin": "^2.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-serve": "^0.1.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jaryd remillard",
+  "license": "ISC"
+}

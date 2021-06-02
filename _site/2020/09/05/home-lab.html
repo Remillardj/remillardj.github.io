@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Home Lab | jremillard.com</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Home Lab" />
+<meta name="author" content="Remillardj" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Real home lab I’ve seen several posts on Hacker News regarding setting up a home lab. One thing that really itches is a standard definition of what a home lab is. Frankly, it’s too broad to have a set definition of ‘X’ amount switches, servers, and what you need to do with it. A home lab is the definition in of itself, it’s a lab. It’s a place to learn by trial and error, use new technologies." />
+<meta property="og:description" content="Real home lab I’ve seen several posts on Hacker News regarding setting up a home lab. One thing that really itches is a standard definition of what a home lab is. Frankly, it’s too broad to have a set definition of ‘X’ amount switches, servers, and what you need to do with it. A home lab is the definition in of itself, it’s a lab. It’s a place to learn by trial and error, use new technologies." />
+<link rel="canonical" href="http://localhost:4000/2020/09/05/home-lab.html" />
+<meta property="og:url" content="http://localhost:4000/2020/09/05/home-lab.html" />
+<meta property="og:site_name" content="jremillard.com" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-09-05T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Home Lab" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/2020/09/05/home-lab.html","headline":"Home Lab","datePublished":"2020-09-05T00:00:00-05:00","dateModified":"2020-09-05T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2020/09/05/home-lab.html"},"author":{"@type":"Person","name":"Remillardj"},"description":"Real home lab I’ve seen several posts on Hacker News regarding setting up a home lab. One thing that really itches is a standard definition of what a home lab is. Frankly, it’s too broad to have a set definition of ‘X’ amount switches, servers, and what you need to do with it. A home lab is the definition in of itself, it’s a lab. It’s a place to learn by trial and error, use new technologies.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="jremillard.com" />
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">jremillard.com</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Home Lab</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2020-09-05T00:00:00-05:00" itemprop="datePublished">
+        Sep 5, 2020
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="real-home-lab">Real home lab</h1>
+<p>I’ve seen several posts on Hacker News regarding setting up a home lab. One thing that really itches is a standard definition of what a home lab is. Frankly, it’s too broad to have a set definition of ‘X’ amount switches, servers, and what you need to do with it. A home lab is the definition in of itself, it’s a lab. It’s a place to learn by trial and error, use new technologies.</p>
+
+<h2 id="house">House</h2>
+<p>It’s about time but I finally got a house, now I can set up a real lab. Fortunately and unfortunately, the laundry room is an isolated room accessed via the garage, however, there <em>is</em> cooling via vent from the AC, <em>and</em> get this, a vent for heat to exhaust out of from the water heater. WOW! Holy grail of natural media room.</p>
+
+<h2 id="setting-up">Setting up</h2>
+<p>I fortunately had a mini server rack with a fully loaded Dell R710 and R620. Originally, I had Cisco L2 managed switches which I used as a unmanaged. I also was able to obtain netgear 4 drive NAS 1U server with 4 8TB Red WD’s. Using CAT5e cable I was able to reach near 500MB of transfer speed, making sharing files within the LAN quite quick. I had a Ubiquiti EdgeRouter with a bridged port to a Eero mesh network to allow WiFi and another port for hard wired devices like the servers and mini PC’s. I also set up the EdgeRouter’s built-in dnsmasq service to allow hostnames to be considered part of a local domain ‘myraidify.net’. This allowed the ability to create in-house pages like uptime (decouvrir) and seamless loadbalancing as managing DHCP ip’s is a big PITA in a LAN based environment. I however upgraded to use Ubiquiti AP’s in lieu of Eero’s as the eero’s were first generation before bought out by Amazon, thus the hardware as dying. I went overboard and got two UAC-AP-Pro’s in a 900 sqft apartment. Which if you know, can reach 400 sqft with 1GB+ 5Ghz and my apartment being mostly drywall. The frequencies did interfere often, soon after though I moved out of the apartment.</p>
+
+<h2 id="doing-it-right">Doing it right</h2>
+<p>I’m blogging while running on little sleep and non-stop patching, scheduling, handling appointments, and planning equipment for my new house that I purchased in Austin so bare with me. Moving in, I already knew what I wanted: Ubiquiti network with 3rd party physical security system with remote monitoring. The latter that comes to mind with it’s geurilla marketing is: simplisafe. I was skeptical and wanted the ability to not have to pay for monitoring but self monitor. It was a battle between Abode and SimpliSafe, but simplisafe won. For it’s simplicity, flexibility, and truly was easy to install. The hardware feels cheap but it works, literally works out of the box flawlessly and that made it. Now for network, I could easily do a mesh network like google and use the ethernet ports but I would still lose a TON of download speed. Even with a direct CAT6 cable from google wifi mesh router tied to the fiber jack. Going in, I want to do it right. I obtained the Ubiquiti dream machine, along with tons of camears, two 24 port PoE ethernet switchesm 4 bay NVR, and multiple UAP-AC-Pro’s. Installation is easy, the dream machine lives up to the name with it’s built in controller for all UI based gear (protect, etc). The most difficult part is getting wires to the second story, it’s either follow up with the vents in a compliance ethernet cable, follow along in a PVC cable with the water heater, or go outside into the attic to another PoE switch if necessary for PoE powered devices. Granted, the cable would need to be outdoor rated PVC cables. My only worry is how easy it is to cut the wires. Granted I can create a sensu-esque in-house tool based on pinging a cloud device to indicate local internet access. All in all, I’ll upload pictures when the server is complete. All in all, use 5Ghz with different frequencies to prevent collision within device connection and CAT6 cables to prevent crossover.</p>
+
+  </div><a class="u-url" href="/2020/09/05/home-lab.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+        <ul class="contact-list">
+          <li class="p-name">Remillardj</li>
+          <li><a class="u-email" href="mailto:hi@jremillard.com">hi@jremillard.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p>A small website to write about things I&#39;m learning, post my thoughts to forget later, things to teach that may be useful, and possible to post projects.
+</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/remillardj" title="remillardj"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/karatedba" title="karatedba"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>4 Things To Consider For Backups | jremillard.com</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="4 Things To Consider For Backups" />
+<meta name="author" content="Remillardj" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We store everything we need on these things Since becoming a DBA, I have learned that something as simple as a backup can actually come with a lot of caveats that may not have simple solutions. In my mind beforehand and have worked at other tech places, backing up data was a simple backup to a cloud storage or a SAN drive of some sort. You back it up once a day or once a week, that is it. If something happened such as file went missing or someone lost their computer, we can just roll back with what we got on file. However, since becoming a DBA, there are many different hurdles I never thought of or considered, especially when it comes to a high availability environment with high SLA’s. Here are 4 things to consider when creating your backup system." />
+<meta property="og:description" content="We store everything we need on these things Since becoming a DBA, I have learned that something as simple as a backup can actually come with a lot of caveats that may not have simple solutions. In my mind beforehand and have worked at other tech places, backing up data was a simple backup to a cloud storage or a SAN drive of some sort. You back it up once a day or once a week, that is it. If something happened such as file went missing or someone lost their computer, we can just roll back with what we got on file. However, since becoming a DBA, there are many different hurdles I never thought of or considered, especially when it comes to a high availability environment with high SLA’s. Here are 4 things to consider when creating your backup system." />
+<link rel="canonical" href="http://localhost:4000/2018/10/14/4-things-to-consider-for-backups.html" />
+<meta property="og:url" content="http://localhost:4000/2018/10/14/4-things-to-consider-for-backups.html" />
+<meta property="og:site_name" content="jremillard.com" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-10-14T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="4 Things To Consider For Backups" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/2018/10/14/4-things-to-consider-for-backups.html","headline":"4 Things To Consider For Backups","datePublished":"2018-10-14T00:00:00-05:00","dateModified":"2018-10-14T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/10/14/4-things-to-consider-for-backups.html"},"author":{"@type":"Person","name":"Remillardj"},"description":"We store everything we need on these things Since becoming a DBA, I have learned that something as simple as a backup can actually come with a lot of caveats that may not have simple solutions. In my mind beforehand and have worked at other tech places, backing up data was a simple backup to a cloud storage or a SAN drive of some sort. You back it up once a day or once a week, that is it. If something happened such as file went missing or someone lost their computer, we can just roll back with what we got on file. However, since becoming a DBA, there are many different hurdles I never thought of or considered, especially when it comes to a high availability environment with high SLA’s. Here are 4 things to consider when creating your backup system.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="jremillard.com" />
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">jremillard.com</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">4 Things To Consider For Backups</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2018-10-14T00:00:00-05:00" itemprop="datePublished">
+        Oct 14, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><img src="/img/1*QOsU_Tk9SbPqfT0OpzKH7w.jpeg" alt="" /></p>
+<blockquote>
+  <p>We store everything we need on these things</p>
+</blockquote>
+
+<p>Since becoming a DBA, I have learned that something as simple as a backup can actually come with a lot of caveats that may not have simple solutions. In my mind beforehand and have worked at other tech places, backing up data was a simple backup to a cloud storage or a SAN drive of some sort. You back it up once a day or once a week, that is it. If something happened such as file went missing or someone lost their computer, we can just roll back with what we got on file. However, since becoming a DBA, there are many different hurdles I never thought of or considered, especially when it comes to a high availability environment with high SLA’s. Here are 4 things to consider when creating your backup system.</p>
+
+<h3 id="1-availability">1. Availability</h3>
+
+<p>The first point encompasses different aspects when it comes to availability, however, there are three primary points I want to hit on when it comes to this topic. The first aspect to think about is how accessible are your backups. If the only backups you keep are an off-site cold storage, that will be a bottleneck if there ever is a case where backups are required to bring a service online. This is typically well known not to only have off-site backups and not practiced often, but I have seen cases where that is the only way to obtain certain files and documents. Another aspect is the latency of the backup server. If the backup server is one that is on the backlog, neglected, with the oldest and outdated switch, this will cause issues of unavailability of the backup, as well as a lengthy disaster recovery process taking hours to access. Lastly, the question to ask yourself is how long would it take you from the point of learning that you will have to recover the backup, to actually getting it implemented and accessed by the service. This is in consideration of both points listed above but may also consider the method of accessing the backup.</p>
+
+<h3 id="2-datarecovery">2. Data Recovery</h3>
+
+<p>This point is not talking about bottlenecks or recommendations for disaster recovery, but rather a thought exercise of the availability of data for a disaster or a recovery process. Something to think about when creating a backup system is the frequency of the backups being created and the critical data that is being generated or collected from the point of a data loss and the latest backup. Say, backups are created at midnight every day, but sometime afterward data is corrupted, therefore any work done for that day is gone. How do you prevent that from happening? Understandably, there is little you can do to prevent several minutes of data corruption, there may be times where that is the best a company can do. However, this is something to think about, how to prevent data corruption from ruining an entire day worth of work.</p>
+
+<h3 id="3-hardware-and-softwarefailures">3. Hardware and software failures</h3>
+
+<p>A simple answer to preventing hardware and software failures is making backups upon backups, on several different servers in several different regions of the world. However, these still happen and can still erase important data. Any part of the entire stack can fail: the backup software or script, the backup server, the archive server hard drives, network connections, a bad commit or bad query, server overload, even drive space which can fill up overnight. Layout the most critical parts of the backup systems’ stack, and implement tools to monitor and self-correct when issues arise. Always maintain off-site external backups, and create policies for data retention.</p>
+
+<h3 id="4-scalability">4. Scalability</h3>
+
+<p>Unfortunately, as the company and software grow, so will databases and backup sizes. With this comes a reiterated set of problems, especially with where on the stack is the system going to be overloaded, and where is expansion going to alleviate the most. Best practices to scale your scalability to implement good third-party monitoring software for just about any part of the stack, network with our database administrators with how they solved problems, and stress test your backup system to see where faults pop up.</p>
+
+<h3 id="ending">Ending</h3>
+
+<p>Hopefully, these points to look for were helpful and gave you some food for thought. Just remember, databases are some of the most complicated parts of the services and software, DBA’s handle a lot more than perceived.</p>
+
+
+  </div><a class="u-url" href="/2018/10/14/4-things-to-consider-for-backups.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+        <ul class="contact-list">
+          <li class="p-name">Remillardj</li>
+          <li><a class="u-email" href="mailto:hi@jremillard.com">hi@jremillard.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p>A small website to write about things I&#39;m learning, post my thoughts to forget later, things to teach that may be useful, and possible to post projects.
+</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/remillardj" title="remillardj"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/karatedba" title="karatedba"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

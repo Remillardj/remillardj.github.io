@@ -1,0 +1,21 @@
+---
+layout:	post
+title:	"Importance of having a different hobby"
+date:	2019-10-11
+---
+
+Three posts in one day, WHAT?!
+
+Yep. Finally had the urge to write some posts, it's a whenever I can and want kind of thing.
+
+Recently I read an article about the importance of having a side-project, tech related. It is a great read and I do agree that it is important, but one thing I have learned in the recent year is the importance of having a hobby outside of your job field. There is a lot to learn in tech and there always will be, the newest and fanciest tech to the oldest and most fundamental, it's all great and I love it.
+
+For some, doing some programming on the side of their programming job is fine, they are capable without burnout or can run at that pace for several years before burning out. Power to them. But in a way, that's a narrow path.
+
+There is much to learn in different industries that can transfer over to the technical industry subconsciously. I recently have been pursuing more a racing hobby, shifter karts to sim racing. Racing is something I have always been really into, Need For Speed: Carbon is what got me hooked on the Audi R8 and has ever since, still is my dream car 13+ years later. It has expanded my skills and I feel like it is making me a much more rounded engineer. It can take my mind off of work so I can refresh for the next work day, it requires an intense amount of focus, very precise timing and immense patience. With it I have learned a lot about cars and character traits, but has helped me understand one very improtant lesson that the senior engineers have been saying to me. It takes time.
+
+There will always be edge cases, accepting that some things just take time is more productive then trying to shove past it. The attitude to be working a tech job and doing tech stuff in your free time might seem like the correct way of working in tech but frankly, it can be silly over time. I love amibitons, dreams and passions, I would never stomp on those, especially since I am like too. I do tech stuff in my free time sometimes but I learned I have got to pace myself to not burn out and doing so it is more effective then constantly pushing through until a breaking point. But no matter how hard I work, some career milestones just take time and there isn't anything you can do to control that.
+
+The 2019 Russian GP Formula 1 had an example of this, frankly, Formula 1 has a lot of examples. It has shifted over to more older racing drivers to much younger, ranging from 17-18 years old. They are unarguable very talented and have much going for them, many are more skilled than their older peers. However, Charles LeClerc showed the difference between the older F1 drivers and the younger F1 drivers. How Sebastian Vettel handled the situation of Ferrari telling him to let Charles past even though Charles at 1.5 seconds behind with Hamilton just a second behind him and Vettel putting in the fastest lap after each lap. Compare Singapore GP where Charles was immediately upset with being undercut versus Sebastian dealing with Ferrari telling him to let Charles past to even when Vettel's MGU-K supposedly failed, it was handled with grace and obvious frustration, but he saw the big picture. It is those sideline things that are hard to see when you start out. There isn't much you can do to learn those things besides pay attention and accept it takes time. Despite how my previous employment ended, which wasn't necessarily bad but rather I didn't know how to handle it, there was one thing my boss said to me when I wanting to propose to my now wife when her parents did not approve.
+
+He said, "Think of it like this; you and her are both in the car, on your way somewhere that usually takes 10 minutes. You get stuck in bad traffic and it looks like it's going to take a few days to get there, but that's okay because you're both in the car, going in the same direction." However applicable to marriage that is, it also seems applicable to career milestones, I am doing the things to get there, for others they may take no time and it might take me awhile, but that's okay because I am getting there.
